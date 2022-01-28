@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- STEP 5 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Electron specific meta. See the documentation. -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/materialize.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- This title will overwrite the title from the main.js window initialization function. -->
+    <title>Image shrink app</title>
+</head>
+
+<body>
+    <div class="container center-align">
+        <h3><i class="fas fa-images"></i> ImageShrink</h3>
+        <p>Choose an image to resize.</p>
+        <form id="image-form">
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Browse</span>
+                    <input type="file" id="img">
+                </div>
+
+                <div class="file-path-wrapper">
+                    <input type="text" class="file-path validate" placeholder="Upload file">
+                </div>
+            </div>
+                <p>
+                    <strong>Quality</strong>
+                    <em>The lower the quality the smaller the file size.</em>
+                </p>
+                <p class="range-field">
+                    <input type="range" min="0" max="100" id="slider">
+                </p>
+                <input type="submit" value="Resize" class="btn black">
+        </form>
+        <div class="card output">
+            <div class="card-content">
+                Output path <span id="output-path"></span>
+            </div>
+        </div>       
+    </div>
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/helperscripts.js"></script>
+</body>
+
+</html>
